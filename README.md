@@ -1,0 +1,1 @@
+The invoice to cash process, sometimes called I2C, is everything that happens from the moment you create an invoice to the moment that payment hits your bank account. Think of it as the complete journey your money takes to get from your client to you.
