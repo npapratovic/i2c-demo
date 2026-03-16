@@ -3,12 +3,12 @@
 namespace App\Providers;
 
 use Carbon\CarbonImmutable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
-use Illuminate\Database\Eloquent\Model;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -43,7 +43,7 @@ class AppServiceProvider extends ServiceProvider
         );
         Schema::defaultStringLength(191);
 
-        if (!app()->isProduction()) {
+        if (! app()->isProduction()) {
             Model::preventLazyLoading();
         }
 
